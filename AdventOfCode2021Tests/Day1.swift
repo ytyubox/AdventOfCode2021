@@ -1,22 +1,34 @@
 import Foundation
-
+import CustomDump
 import XCTest
 
 final class Day1Tests: XCTestCase {
+    /// How many measurements are larger than the previous measurement?
     func testPage1() throws {
-        let sut = input.split(separator: "\n").map(\.description).compactMap(Int.init)
+        let sut = input1.compactMap(Int.init)
         var count = 0
         for i in 1..<sut.count where sut[i-1]<sut[i] {
             count += 1
         }
-        XCTAssertEqual(count, 1316)
+        assertEqual(count, 1316)
     }
+    /// Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
     func testPage2() throws {
+        let preSut =  input1.compactMap(Int.init)
+        var sut: [Int] = []
+        for i in 0...(preSut.count-3) {
+            sut.append(preSut[i]+preSut[i+1]+preSut[i+2])
+        }
         
+        var count = 0
+        for i in 1..<sut.count where sut[i-1]<sut[i] {
+            count += 1
+        }
+        
+        assertEqual(count, 1344)
     }
 }
-
-private let input =
+private let input1:Input =
 """
 174
 180
