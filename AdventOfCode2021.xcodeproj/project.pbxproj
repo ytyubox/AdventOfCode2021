@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		D26908712757A07900C0AF6B /* AdventOfCode2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26908682757A07900C0AF6B /* AdventOfCode2021.framework */; };
 		D26908762757A07900C0AF6B /* AdventOfCode2021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26908752757A07900C0AF6B /* AdventOfCode2021Tests.swift */; };
-		D26908772757A07900C0AF6B /* AdventOfCode2021.h in Headers */ = {isa = PBXBuildFile; fileRef = D269086B2757A07900C0AF6B /* AdventOfCode2021.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D26908812757A08600C0AF6B /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26908802757A08600C0AF6B /* Day1.swift */; };
+		D26908832757A14A00C0AF6B /* keep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26908822757A14A00C0AF6B /* keep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +25,10 @@
 
 /* Begin PBXFileReference section */
 		D26908682757A07900C0AF6B /* AdventOfCode2021.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdventOfCode2021.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D269086B2757A07900C0AF6B /* AdventOfCode2021.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdventOfCode2021.h; sourceTree = "<group>"; };
 		D26908702757A07900C0AF6B /* AdventOfCode2021Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventOfCode2021Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26908752757A07900C0AF6B /* AdventOfCode2021Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventOfCode2021Tests.swift; sourceTree = "<group>"; };
+		D26908802757A08600C0AF6B /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		D26908822757A14A00C0AF6B /* keep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,7 @@
 		D269086A2757A07900C0AF6B /* AdventOfCode2021 */ = {
 			isa = PBXGroup;
 			children = (
-				D269086B2757A07900C0AF6B /* AdventOfCode2021.h */,
+				D26908822757A14A00C0AF6B /* keep.swift */,
 			);
 			path = AdventOfCode2021;
 			sourceTree = "<group>";
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				D26908752757A07900C0AF6B /* AdventOfCode2021Tests.swift */,
+				D26908802757A08600C0AF6B /* Day1.swift */,
 			);
 			path = AdventOfCode2021Tests;
 			sourceTree = "<group>";
@@ -89,7 +92,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26908772757A07900C0AF6B /* AdventOfCode2021.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,7 @@
 				TargetAttributes = {
 					D26908672757A07900C0AF6B = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					D269086F2757A07900C0AF6B = {
 						CreatedOnToolsVersion = 13.1;
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26908832757A14A00C0AF6B /* keep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26908812757A08600C0AF6B /* Day1.swift in Sources */,
 				D26908762757A07900C0AF6B /* AdventOfCode2021Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +342,7 @@
 		D269087B2757A07900C0AF6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -358,6 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -365,6 +372,7 @@
 		D269087C2757A07900C0AF6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -393,6 +401,7 @@
 		D269087E2757A07900C0AF6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -414,6 +423,7 @@
 		D269087F2757A07900C0AF6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
