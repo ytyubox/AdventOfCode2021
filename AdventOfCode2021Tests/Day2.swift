@@ -17,6 +17,24 @@ final class Day2Tests: XCTestCase {
         }
         assertEqual(i*j, 2322630)
     }
+    func testPage2() throws {
+        let sut = input.map(Dive.init)
+        let (h, _, d) =
+        sut.reduce(into: (0,0,0)) { d, dive in
+            print(d)
+            switch dive {
+            case .forward(let int):
+                d.0 += int
+                d.2 += d.1*int
+            case .down(let int):
+                d.1 += int
+            case .up(let int):
+                d.1 -= int
+            }
+        }
+        
+        assertEqual(h*d, 2105273490)
+    }
     private enum Dive {
         init(_ c: String) {
             let c = c.split(separator: " ").map(\.description)
