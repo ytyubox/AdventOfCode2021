@@ -14,6 +14,7 @@
 		D26908852757A39300C0AF6B /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26908842757A39300C0AF6B /* helpers.swift */; };
 		D26908882757A59300C0AF6B /* CustomDump in Frameworks */ = {isa = PBXBuildFile; productRef = D26908872757A59300C0AF6B /* CustomDump */; };
 		D269088A27588AB800C0AF6B /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269088927588AB800C0AF6B /* Day2.swift */; };
+		D2852F8E275B34E300C4BC65 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2852F8D275B34E300C4BC65 /* Day4.swift */; };
 		D2B5F6DE275A6FBE007B12B5 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5F6DD275A6FBE007B12B5 /* Day3.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		D26908822757A14A00C0AF6B /* keep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keep.swift; sourceTree = "<group>"; };
 		D26908842757A39300C0AF6B /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		D269088927588AB800C0AF6B /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
+		D2852F8D275B34E300C4BC65 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		D2B5F6DD275A6FBE007B12B5 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				D26908802757A08600C0AF6B /* Day1.swift */,
 				D269088927588AB800C0AF6B /* Day2.swift */,
 				D2B5F6DD275A6FBE007B12B5 /* Day3.swift */,
+				D2852F8D275B34E300C4BC65 /* Day4.swift */,
 				D26908842757A39300C0AF6B /* helpers.swift */,
 			);
 			path = AdventOfCode2021Tests;
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26908812757A08600C0AF6B /* Day1.swift in Sources */,
+				D2852F8E275B34E300C4BC65 /* Day4.swift in Sources */,
 				D2B5F6DE275A6FBE007B12B5 /* Day3.swift in Sources */,
 				D269088A27588AB800C0AF6B /* Day2.swift in Sources */,
 				D26908762757A07900C0AF6B /* AdventOfCode2021Tests.swift in Sources */,
