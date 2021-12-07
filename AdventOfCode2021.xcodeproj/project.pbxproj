@@ -15,7 +15,9 @@
 		D26908882757A59300C0AF6B /* CustomDump in Frameworks */ = {isa = PBXBuildFile; productRef = D26908872757A59300C0AF6B /* CustomDump */; };
 		D269088A27588AB800C0AF6B /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269088927588AB800C0AF6B /* Day2.swift */; };
 		D2852F8E275B34E300C4BC65 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2852F8D275B34E300C4BC65 /* Day4.swift */; };
+		D2975864275C8247001F01CC /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2975863275C8247001F01CC /* Day5.swift */; };
 		D2B5F6DE275A6FBE007B12B5 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5F6DD275A6FBE007B12B5 /* Day3.swift */; };
+		D2BBA70D275E525300995D88 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BBA70C275E525300995D88 /* Day6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,9 @@
 		D26908842757A39300C0AF6B /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		D269088927588AB800C0AF6B /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		D2852F8D275B34E300C4BC65 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		D2975863275C8247001F01CC /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
 		D2B5F6DD275A6FBE007B12B5 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
+		D2BBA70C275E525300995D88 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				D269088927588AB800C0AF6B /* Day2.swift */,
 				D2B5F6DD275A6FBE007B12B5 /* Day3.swift */,
 				D2852F8D275B34E300C4BC65 /* Day4.swift */,
+				D2975863275C8247001F01CC /* Day5.swift */,
+				D2BBA70C275E525300995D88 /* Day6.swift */,
 				D26908842757A39300C0AF6B /* helpers.swift */,
 			);
 			path = AdventOfCode2021Tests;
@@ -223,6 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26908812757A08600C0AF6B /* Day1.swift in Sources */,
+				D2BBA70D275E525300995D88 /* Day6.swift in Sources */,
+				D2975864275C8247001F01CC /* Day5.swift in Sources */,
 				D2852F8E275B34E300C4BC65 /* Day4.swift in Sources */,
 				D2B5F6DE275A6FBE007B12B5 /* Day3.swift in Sources */,
 				D269088A27588AB800C0AF6B /* Day2.swift in Sources */,
