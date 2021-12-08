@@ -1,5 +1,6 @@
 import Foundation
 import XCTest
+import CustomDump
 
 final class Day3Tests: XCTestCase {
     func test() throws {
@@ -90,8 +91,12 @@ final class Day3Tests: XCTestCase {
 }
 
 extension Equatable {
-    func shouldBe(_ o: Self, file:StaticString = #filePath, line: UInt = #line) {
-        XCTAssertEqual(self, o, file:file, line: line)
+    func shouldBe(_ o: Self, _ message: @autoclosure () -> String = "",  file:StaticString = #filePath, line: UInt = #line) {
+        XCTAssertEqual(self, o, message(), file:file, line: line)
+    }
+    func check(_ o: Self, _ message: @autoclosure () -> String = "",  file:StaticString = #filePath, line: UInt = #line) -> Self {
+        XCTAssertNoDifference(self, o, message(), file:file, line: line)
+        return self
     }
 }
 
