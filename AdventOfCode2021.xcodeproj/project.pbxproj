@@ -16,6 +16,7 @@
 		D269088A27588AB800C0AF6B /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269088927588AB800C0AF6B /* Day2.swift */; };
 		D2852F8E275B34E300C4BC65 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2852F8D275B34E300C4BC65 /* Day4.swift */; };
 		D2975864275C8247001F01CC /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2975863275C8247001F01CC /* Day5.swift */; };
+		D2B2E5A1275F7765003FEEBB /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2E5A0275F7765003FEEBB /* Day7.swift */; };
 		D2B5F6DE275A6FBE007B12B5 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5F6DD275A6FBE007B12B5 /* Day3.swift */; };
 		D2BBA70D275E525300995D88 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BBA70C275E525300995D88 /* Day6.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		D269088927588AB800C0AF6B /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		D2852F8D275B34E300C4BC65 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		D2975863275C8247001F01CC /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		D2B2E5A0275F7765003FEEBB /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		D2B5F6DD275A6FBE007B12B5 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		D2BBA70C275E525300995D88 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				D2852F8D275B34E300C4BC65 /* Day4.swift */,
 				D2975863275C8247001F01CC /* Day5.swift */,
 				D2BBA70C275E525300995D88 /* Day6.swift */,
+				D2B2E5A0275F7765003FEEBB /* Day7.swift */,
 				D26908842757A39300C0AF6B /* helpers.swift */,
 			);
 			path = AdventOfCode2021Tests;
@@ -235,6 +238,7 @@
 				D2B5F6DE275A6FBE007B12B5 /* Day3.swift in Sources */,
 				D269088A27588AB800C0AF6B /* Day2.swift in Sources */,
 				D26908762757A07900C0AF6B /* AdventOfCode2021Tests.swift in Sources */,
+				D2B2E5A1275F7765003FEEBB /* Day7.swift in Sources */,
 				D26908852757A39300C0AF6B /* helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
