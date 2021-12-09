@@ -95,19 +95,16 @@ extension Equatable {
         XCTAssertEqual(self, o, message(), file:file, line: line)
     }
     func check(_ o: Self, _ message: @autoclosure () -> String = "",  file:StaticString = #filePath, line: UInt = #line) -> Self {
+        XCTAssertEqual(self, o, message(), file:file, line: line)
+        return self
+    }
+    func checkDiff(_ o: Self, _ message: @autoclosure () -> String = "",  file:StaticString = #filePath, line: UInt = #line) -> Self {
         XCTAssertNoDifference(self, o, message(), file:file, line: line)
         return self
     }
 }
 
-extension Array {
-    func group<Key: Hashable>(_ keyForValue: (Element) throws -> Key) rethrows -> [Key: [Element]] {
-        try Dictionary.init(grouping: self, by: keyForValue)
-    }
-    func sum() -> Int where Element == Int {
-        reduce(0, +)
-    }
-}
+
 extension Collection {
     func each(_ body: (Element) throws -> Void) rethrows -> Self {
         try forEach(body)

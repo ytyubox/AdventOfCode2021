@@ -22,3 +22,15 @@ struct Input: ExpressibleByStringLiteral, Sequence {
         array.makeIterator()
     }
 }
+
+extension Array {
+    func group<Key: Hashable>(_ keyForValue: (Element) throws -> Key) rethrows -> [Key: [Element]] {
+        try Dictionary.init(grouping: self, by: keyForValue)
+    }
+    func sum() -> Int where Element == Int {
+        reduce(0, +)
+    }
+    func product() -> Int where Element == Int {
+        reduce(into: 1, *=)
+    }
+}

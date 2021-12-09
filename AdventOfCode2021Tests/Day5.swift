@@ -22,6 +22,12 @@ final class Day5Tests: XCTestCase {
 }
 
 struct Board<T> {
+    internal init(w: Int, l: Int, array: [T]) {
+        self.w = w
+        self.l = l
+        self.array = array
+    }
+    
     internal init(w: Int, l: Int, defaultValue: T) {
         self.w = w
         self.l = l
