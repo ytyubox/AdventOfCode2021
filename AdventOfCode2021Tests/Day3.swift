@@ -94,8 +94,15 @@ extension Equatable {
     func shouldBe(_ o: Self, _ message: @autoclosure () -> String = "",  file:StaticString = #filePath, line: UInt = #line) {
         XCTAssertEqual(self, o, message(), file:file, line: line)
     }
+    func shouldBe(_ o: Self, _ message: (Self) -> String,  file:StaticString = #filePath, line: UInt = #line) {
+        XCTAssertEqual(self, o, message(self), file:file, line: line)
+    }
     func check(_ o: Self, _ message: @autoclosure () -> String = "",  file:StaticString = #filePath, line: UInt = #line) -> Self {
         XCTAssertEqual(self, o, message(), file:file, line: line)
+        return self
+    }
+    func check(_ o: Self, _ message: (Self) -> String,  file:StaticString = #filePath, line: UInt = #line) -> Self {
+        XCTAssertEqual(self, o, message(self), file:file, line: line)
         return self
     }
     func checkDiff(_ o: Self, _ message: @autoclosure () -> String = "",  file:StaticString = #filePath, line: UInt = #line) -> Self {

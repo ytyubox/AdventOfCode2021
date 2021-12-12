@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-final class ATests: XCTestCase {
+final class Day7Tests: XCTestCase {
     func test() throws {
         assert(input: inputDemo, shouldBe: 37)
         assert(input: input, shouldBe: 349769)
