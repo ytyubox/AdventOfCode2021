@@ -9,7 +9,8 @@ func assertEqual<T>(
 ) where T: Equatable {
       CustomDump.XCTAssertNoDifference(try expression1(), try expression2(), message(), file: file, line: line)
 }
-struct Input: ExpressibleByStringLiteral, Sequence {
+struct Input: ExpressibleByStringLiteral, Sequence, CustomStringConvertible {
+    var description: String {array.joined(separator: "\n")}
     let array: [String]
     
     init(stringLiteral value: String) {

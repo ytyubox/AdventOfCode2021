@@ -22,6 +22,7 @@ final class Day5Tests: XCTestCase {
 }
 
 struct Board<T> {
+    
     internal init(w: Int, l: Int, array: [T]) {
         self.w = w
         self.l = l
@@ -33,9 +34,22 @@ struct Board<T> {
         self.l = l
         self.array = Array(repeating: defaultValue, count: w*l)
     }
+    subscript (safe x: Int, y: Int) -> T? {
+        get {
+            let i = y*w+x
+            return array.indices.contains(i)
+            ? array[y*w+x]
+            : nil
+        }
+        set {
+            let i = y*w+x
+            guard
+                array.indices.contains(i), let n = newValue else {return}
+            array[i] = n
+        }
+    }
     subscript (x: Int, y: Int) -> T {
         get {
-            
             array[y*w+x]
         }
         set {
@@ -45,12 +59,13 @@ struct Board<T> {
     let w: Int, l: Int
     private(set) var array: [T]
 }
-extension Board where T == Int {
+
+extension Board where T: CustomStringConvertible {
     var peak: String {
         var r = ""
         for i in array.indices {
             if i.isMultiple(of: w), !r.isEmpty {r.append("\n")}
-            let x = array[i] == 0 ? "0" : array[i].description.description
+            let x = array[i].description == "0" ? "0" : array[i].description.description
             r.append(x)
         }
         return r
@@ -85,7 +100,7 @@ struct Point:Equatable, CustomStringConvertible, Hashable {
     }
     
     let x:Int,  y: Int
-    var description: String {"\(x),\(y)"}
+    var description: String {"Point(\(x),\(y))"}
 }
 
 struct Line: Equatable, CustomStringConvertible {
