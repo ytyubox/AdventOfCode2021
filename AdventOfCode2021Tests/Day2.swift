@@ -7,34 +7,36 @@ final class Day2Tests: XCTestCase {
         var i = 0, j = 0
         for d in sut {
             switch d {
-            case .forward(let int):
+            case let .forward(int):
                 i += int
-            case .down(let int):
+            case let .down(int):
                 j += int
-            case .up(let int):
+            case let .up(int):
                 j -= int
             }
         }
-        assertEqual(i*j, 2322630)
+        assertEqual(i * j, 2_322_630)
     }
+
     func testPage2() throws {
         let sut = input.map(Dive.init)
         let (h, _, d) =
-        sut.reduce(into: (0,0,0)) { d, dive in
-            print(d)
-            switch dive {
-            case .forward(let int):
-                d.0 += int
-                d.2 += d.1*int
-            case .down(let int):
-                d.1 += int
-            case .up(let int):
-                d.1 -= int
+            sut.reduce(into: (0, 0, 0)) { d, dive in
+                print(d)
+                switch dive {
+                case let .forward(int):
+                    d.0 += int
+                    d.2 += d.1 * int
+                case let .down(int):
+                    d.1 += int
+                case let .up(int):
+                    d.1 -= int
+                }
             }
-        }
-        
-        assertEqual(h*d, 2105273490)
+
+        assertEqual(h * d, 2_105_273_490)
     }
+
     private enum Dive {
         init(_ c: String) {
             let c = c.split(separator: " ").map(\.description)
@@ -45,6 +47,7 @@ final class Day2Tests: XCTestCase {
             default: fatalError()
             }
         }
+
         case forward(Int), down(Int), up(Int)
     }
 }

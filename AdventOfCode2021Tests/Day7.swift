@@ -4,31 +4,32 @@ import XCTest
 final class Day7Tests: XCTestCase {
     func test() throws {
         assert(input: inputDemo, shouldBe: 37)
-        assert(input: input, shouldBe: 349769)
+        assert(input: input, shouldBe: 349_769)
         assert2(input: inputDemo, shouldBe: 168)
-        assert2(input: input, shouldBe: 99540554)
+        assert2(input: input, shouldBe: 99_540_554)
     }
+
     func assert(input: String, shouldBe: Int) {
         let sut = input.components(separatedBy: ",").compactMap(Int.init)
         let max = sut.max()!
         let min = sut.min()!
         var m = Int.max
-        for x in min...max {
+        for x in min ... max {
             var t = 0
             for y in sut {
-                t += abs(y-x)
+                t += abs(y - x)
             }
             m = Swift.min(t, m)
         }
         m.shouldBe(shouldBe)
     }
-    
+
     func assert2(input: String, shouldBe: Int) {
         let sut = input.components(separatedBy: ",").compactMap(Int.init)
         let max = sut.max()!
         let min = sut.min()!
         var m = Int.max
-        for x in min...max {
+        for x in min ... max {
             var t = 0
             for y in sut {
                 t += fuel(y, x)
@@ -37,26 +38,28 @@ final class Day7Tests: XCTestCase {
         }
         m.shouldBe(shouldBe)
     }
+
     func testFuel() throws {
-        fuel(0, 5).shouldBe( 15)
-        fuel(1, 5).shouldBe( 10)
-        fuel(2, 5).shouldBe( 6)
-        fuel(16, 5).shouldBe( 66)
-        fuel(4, 5).shouldBe( 1)
-        fuel(2, 5).shouldBe( 6)
-        fuel(7, 5).shouldBe( 3)
-        fuel(1, 5).shouldBe( 10)
-        fuel(2, 5).shouldBe( 6)
-        fuel(14, 5).shouldBe( 45)
+        fuel(0, 5).shouldBe(15)
+        fuel(1, 5).shouldBe(10)
+        fuel(2, 5).shouldBe(6)
+        fuel(16, 5).shouldBe(66)
+        fuel(4, 5).shouldBe(1)
+        fuel(2, 5).shouldBe(6)
+        fuel(7, 5).shouldBe(3)
+        fuel(1, 5).shouldBe(10)
+        fuel(2, 5).shouldBe(6)
+        fuel(14, 5).shouldBe(45)
     }
 }
-var cache:[Int:Int] = [:]
+
+var cache: [Int: Int] = [:]
 func fuel(_ s: Int, _ e: Int) -> Int {
     let diff = abs(s - e)
-    if let cached = cache[diff] {return cached}
+    if let cached = cache[diff] { return cached }
     var r = 0
     var t = 0
-    for _ in 0..<diff {
+    for _ in 0 ..< diff {
         t += 1
         r += t
     }
