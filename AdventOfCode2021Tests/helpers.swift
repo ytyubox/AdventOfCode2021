@@ -30,6 +30,12 @@ extension Array {
         try Dictionary(grouping: self, by: keyForValue)
     }
 
+    func group() -> [Element: [Element]] where Element: Hashable {
+        Dictionary(grouping: self) {
+            $0
+        }
+    }
+
     func sum() -> Int where Element == Int {
         reduce(0, +)
     }
